@@ -1,0 +1,59 @@
+@import "../variables";
+@import "../mixins";
+
+
+table {
+    width: 100%;
+    margin-top: 6mm;
+    border-collapse:collapse;
+
+    th,
+    td {
+        border: 1px solid @primaryColor;
+        padding: 2mm;
+        vertical-align: top;
+
+        ol {
+            margin: 0 0 0 6mm;
+        }
+
+        ul {
+            margin: 0 0 0 4mm;
+        }
+
+        &:first-of-type {
+            border-left: none;
+        }
+
+        &:last-of-type {
+            border-right: none;
+        }
+    }
+
+    th {
+        text-align: left;
+        color: @primaryColor;
+    }
+
+    tr:nth-child(odd) {
+        background-color: @lightColor;
+    }
+
+    &.table-equal-2 {
+        th,
+        td {
+            width: 50%;
+        }
+    }
+
+    &.table-equal-3 {
+        th,
+        td {
+            width: 33%;
+        }
+    }
+
+    &.table-allow-break {
+        page-break-inside: auto;
+    }
+}

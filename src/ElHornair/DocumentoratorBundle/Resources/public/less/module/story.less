@@ -1,0 +1,43 @@
+@import "../variables";
+@import "../mixins";
+
+.story {
+    margin-bottom: 8mm;
+    page-break-inside: avoid;
+
+    table {
+        th,
+        td {
+            border-right: none;
+            border-left: none;
+        }
+
+        th {
+            padding-top: 4mm;
+        }
+
+        tr {
+            &:first-child {
+                border-top: 2px solid @primaryColor;
+            }
+
+            &:nth-child(odd) {
+                background: none;
+            }
+
+            &.story-diagram {
+                td {
+                    border-bottom: none;
+                }
+            }
+
+            th:first-child {
+                width: 22%;
+
+                +th {
+                    width: 78%;
+                }
+            }
+        }
+    }
+}

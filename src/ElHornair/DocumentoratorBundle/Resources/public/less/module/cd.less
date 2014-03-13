@@ -1,0 +1,63 @@
+@import "../variables";
+@import "../mixins";
+
+
+.cd {
+    width: 120mm;
+    height: 120mm;
+    margin: 0 auto;
+    position: relative;
+    top: 50mm;
+
+    .cd-center {
+        position: absolute;
+        width: 10mm;
+        height: 10mm;
+        top: 55mm;
+        left: 55mm;
+        font-size: 1em;
+        text-align: center;
+        line-height: 10mm;
+    }
+
+    .cd-edge {
+        width: 10mm;
+        height: 10mm;
+        border: 1px solid @primaryColor;
+
+        &.cd-left {
+            float: left;
+            border-right: none;
+        }
+        &.cd-right {
+            float: right;
+            border-left: none;
+        }
+    }
+
+    .cd-top {
+        position: absolute;
+        width: 100%;
+        top: 0;
+
+        .cd-edge {
+            &.cd-left,
+            &.cd-right {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .cd-bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        .cd-edge {
+            &.cd-left,
+            &.cd-right {
+                border-top: none;
+            }
+        }
+    }
+}

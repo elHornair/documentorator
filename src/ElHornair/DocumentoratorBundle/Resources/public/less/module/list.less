@@ -1,0 +1,53 @@
+@import "../variables";
+@import "../mixins";
+
+ol {
+    margin: 0 0 0 12mm;
+
+    > li {
+        font-weight: bold;
+        color: @primaryColor;
+
+        > p {
+            margin: 0;
+            font-weight: normal;
+            color: @pure-black;
+            text-align: left;
+        }
+
+        > ol {
+            margin-left: 6mm;
+
+            > li {
+                color: @secondaryColor;
+            }
+        }
+    }
+}
+
+ul {
+    margin: 0 0 0 10mm;
+    list-style: none;
+    font-weight: normal;
+
+    > li {
+        &:before {
+            content:'\2022';
+            display: block;
+            position: relative;
+            max-width: 0px;
+            max-height: 0px;
+            left: -16px;
+            color: @primaryColor;
+            font-size: 20px;
+        }
+
+        > ul {
+            margin-left: 4mm;
+
+            > li:before {
+                color: @secondaryColor;
+            }
+        }
+    }
+}

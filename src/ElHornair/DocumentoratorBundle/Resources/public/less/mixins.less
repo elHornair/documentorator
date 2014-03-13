@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Fjord One';
+    src: url('../bundles/elhornairdocumentorator/font/Fjord_One/FjordOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../bundles/elhornairdocumentorator/font/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald-Bold';
+    src: url('../bundles/elhornairdocumentorator/font/Oswald/Oswald-Bold.ttf') format('truetype');
+}
+
+@font-serif {
+    font-family: 'Fjord One', serif;
+    font-weight: normal;
+}
+
+@font-sans-serif-regular {
+    font-family: 'Oswald-Regular', sans-serif;
+    font-weight: normal;
+}
+
+@font-sans-serif-bold {
+    font-family: 'Oswald-Bold', sans-serif;
+    font-weight: normal;
+}
+
+@font-mono {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: normal;
+}
+
+@no-decoration-bottom {
+    @bottom: ~"@bottom";
+
+    @{bottom} {
+        content: '';
+    }
+}
+
+@no-decoration {
+    margin: 12mm;
+
+    @top: ~"@top";
+    @{top} {
+        content: '';
+        border-bottom: none;
+    }
+
+    @no-decoration-bottom;
+}
+
+@logo-zhaw-head {
+
+    @top: ~"@top";
+
+    @{top} {
+        content: '';
+        float: right;
+        background: url('../bundles/elhornairdocumentorator/img/zhaw.jpg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 20mm;
+        border: none;
+    }
+}

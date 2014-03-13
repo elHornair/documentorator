@@ -1,0 +1,87 @@
+@import "variables";
+@import "mixins";
+
+
+body {
+    @font-serif;
+    font-size: 11pt;
+    line-height: 1.5em;
+}
+
+// typography
+h1,
+h2,
+h3 {
+    @font-sans-serif-regular;
+    white-space: pre;
+}
+
+h1 {
+    margin: 32mm 0 12mm;
+    color: @primaryColor;
+    page-break-before: always;
+    font-size: 1.5em;
+}
+
+h2 {
+    margin: 9mm 0 5mm;
+    color: @secondaryColor;
+    font-size: 1.2em;
+}
+
+h3 {
+    margin: 9mm 0 5mm;
+    color: @secondaryColor;
+    font-size: 1em;
+}
+
+h4 {
+    @font-serif;
+    margin: 9mm 0 5mm;
+    color: @secondaryColor;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+p {
+    text-align: justify;
+    margin: 2mm 0;
+
+    &.no-space-top {
+        margin-top: 0;
+    }
+}
+
+a {
+    color: @primaryColor;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+ol,
+figure,
+table {
+    margin: 5mm 0;
+    page-break-inside: avoid;
+}
+
+dl {
+    width: 100%;
+
+    dt,
+    dd {
+        margin: 0;
+    }
+
+    dt {
+        float: left;
+        width: 40mm;
+    }
+}
+
+.new-page {
+    page-break-before: always;
+}

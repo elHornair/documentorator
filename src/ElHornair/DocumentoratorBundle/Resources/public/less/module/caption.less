@@ -1,0 +1,27 @@
+@import "../variables";
+@import "../mixins";
+
+caption,
+figcaption {
+    caption-side: bottom;
+    text-align: right;
+    color: @primaryColor;
+    font-size: 0.9em;
+    margin: 2mm 0 4mm 4mm;
+}
+
+table caption {
+    counter-increment: caption-table;
+
+    &:before {
+        content: 'Tabelle ' counter(caption-table) ': ';
+    }
+}
+
+figure figcaption {
+    counter-increment: caption-img;
+
+    &:before {
+        content: 'Abbildung ' counter(caption-img) ': ';
+    }
+}

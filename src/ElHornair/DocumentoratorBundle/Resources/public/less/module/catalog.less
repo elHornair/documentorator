@@ -1,0 +1,41 @@
+@import "../variables";
+@import "../mixins";
+
+
+.catalog {
+    margin-left: 0;
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:after {
+            content: leader(' . ') '   ' target-counter(attr(href), page);
+        }
+    }
+
+    li:before {
+        content: '';
+    }
+
+    &.catalog-source {
+        page-break-inside: auto;
+
+        li {
+            margin: 0 0 4mm;
+
+            .footnote-source-label {
+                position: absolute;
+            }
+
+            .footnote-source-additional {
+                display: inline-block;
+                margin-left: 26mm;
+
+                .footnote-source-title {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

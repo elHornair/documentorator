@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+
+@page {
+    size: a4 portrait;
+    margin: 26mm 21mm 27mm 32mm;
+
+    @top: ~"@top";
+    @bottom: ~"@bottom";
+
+    @{top} {
+        content: flow(header);
+        margin-bottom: 8mm;
+        border-bottom: 1px solid @pure-black;
+        vertical-align: bottom;
+        text-align: left;
+    }
+
+    @{bottom} {
+        content: counter(page, upper-roman);
+        margin-top: 8mm;
+        vertical-align: top;
+        text-align: right;
+    }
+}
+
+.title-current {
+    flow: static(header);// move the title of the current chapter to the header
+    @font-serif;
+    font-size: 0.8em;
+}
+
+.break-page {
+    page-break-before: always;
+}
+
+@page content {
+    @bottom: ~"@bottom";
+
+    @{bottom} {
+        content: counter(page);
+    }
+}
+
+.page-external {
+    page: external;
+}
+
+@page external {
+    @no-decoration;
+}
+
+.page-external-landscape {
+    page: external-landscape;
+}
+
+@page external-landscape {
+    @no-decoration;
+    size: A4 landscape;
+}

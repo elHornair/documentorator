@@ -1,0 +1,65 @@
+@import "../variables";
+@import "../mixins";
+
+#content {
+    page: content;
+    counter-reset: h1 caption-table caption-img page 1;
+}
+
+.chapter {
+    counter-reset: h2 footnote;// counters that are reset per chapter
+
+    > h1 {
+        counter-increment: h1;
+
+        &:before {
+            content: counter(h1) "   ";
+        }
+    }
+
+    > h2 {
+        counter-increment: h2;
+        counter-reset: h3;
+
+        &:before {
+            content: counter(h1) "." counter(h2) "  ";
+        }
+    }
+
+    > h3 {
+        counter-increment: h3;
+
+        &:before {
+            content: counter(h1) "." counter(h2) "." counter(h3) "  ";
+        }
+    }
+
+    .title-current {
+        &:before {
+            content: counter(h1);
+            margin-right: 2mm;
+        }
+    }
+}
+
+.chapter-special {
+    &.chapter-portrait {
+        img {
+            float: left;
+            width: 35mm;
+            margin-right: 8mm;
+        }
+
+        dl {
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+        }
+
+        ul {
+            margin-left: 4mm;
+        }
+    }
+}

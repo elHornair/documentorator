@@ -1,0 +1,102 @@
+@import "../variables";
+@import "../mixins";
+
+
+#toc {
+    // general
+    width: 155mm;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    counter-reset: toc-level-1;
+    page-break-inside: auto;
+
+    li {
+        white-space: pre;
+        color: @pure-black;
+
+        a {
+            text-decoration: none;
+            color: @pure-black;
+            position: relative;
+            left: 2mm;
+
+            &:after {
+                text-align: right;
+            }
+        }
+    }
+
+    // first level
+    > li {
+        margin-top: 5mm;
+        margin-left: 2.6mm;
+        @font-sans-serif-regular;
+        font-size: 0.9em;
+        page-break-inside: avoid;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        > a:after {
+            content: leader(' ') target-counter(attr(href), page, upper-roman);
+        }
+
+        &:not(.toc-special) {
+            margin-left: 0;
+            counter-increment: toc-level-1;
+
+            &:before {
+                content: counter(toc-level-1) "  ";
+            }
+
+            > a:after {
+                // non-roman page numbering
+                content: leader(' ') target-counter(attr(href), page);
+            }
+
+            // second and third level
+            ol {
+                margin-top: 1mm;
+                list-style-type: none;
+
+                > li {
+                    @font-serif;
+
+                    > a:after {
+                        content: leader(' . ') '   ' target-counter(attr(href), page);
+                    }
+                }
+            }
+
+            // second level
+            > ol {
+                margin-left: 5.4mm;
+                counter-reset: toc-level-2;
+
+                > li {
+                    counter-increment: toc-level-2;
+
+                    &:before {
+                        content: counter(toc-level-1) "." counter(toc-level-2) "  ";
+                    }
+
+                    // third level
+                    ol {
+                        margin-left: 8mm;
+                        counter-reset: toc-level-3;
+
+                        > li {
+                            counter-increment: toc-level-3;
+
+                            &:before {
+                                content: counter(toc-level-1) "." counter(toc-level-2) "." counter(toc-level-3) "  ";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

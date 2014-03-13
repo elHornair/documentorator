@@ -1,0 +1,79 @@
+@import "../variables";
+@import "../mixins";
+
+
+.standalone {
+    page: standalone;
+
+    dl {
+        dt {
+            font-weight: normal;
+            float: left;
+            min-width: 40mm;
+        }
+
+        dd {
+            margin-left: 40mm;
+        }
+
+        &.wide {
+            dt {
+                min-width: 60mm;
+            }
+        }
+    }
+
+    .standalone-centered {
+        text-align: center;
+    }
+
+    .standalone-title {
+        margin: 8mm 0;
+        white-space: normal;
+        font-size: 1.3em;
+        line-height: 1.4em;
+    }
+
+    .standalone-subtitle {
+        margin: 8mm 0;
+        font-size: 1.8em;
+    }
+
+    .standalone-info {
+        display: block;
+    }
+
+    &.standalone-abstract {
+        page: standalone-abstract;
+    }
+
+    &.standalone-curriculum {
+        page: curriculum;
+    }
+}
+
+@page standalone {
+    @bottom: ~"@bottom";
+    @logo-zhaw-head;
+
+    margin: 36mm 21mm 27mm;
+
+    @{bottom} {
+        content: counter(page);
+    }
+}
+
+@page curriculum {
+    @logo-zhaw-head;
+    @no-decoration-bottom;
+
+    margin: 36mm 21mm 27mm;
+}
+
+@page standalone-abstract {
+    @top: ~"@top";
+    @logo-zhaw-head;
+    @no-decoration-bottom;
+
+    margin: 36mm 21mm 21mm;
+}
