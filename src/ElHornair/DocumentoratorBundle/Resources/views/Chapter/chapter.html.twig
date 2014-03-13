@@ -1,0 +1,8 @@
+{% if container_classes is not defined %}
+    {% set container_classes = '' %}
+{% endif %}
+
+<div class="chapter {{ container_classes }}">
+    {% block content %}
+    {% endblock %}
+</div>

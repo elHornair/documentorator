@@ -1,4 +1,4 @@
 el_hornair_bachelor_doc:
-    resource: "@ElHornairBachelorDocBundle/Resources/config/routing.yml"
+    resource: "@ElHornairDocumentoratorBundle/Resources/config/routing.yml"
     prefix:   /
 

@@ -1,0 +1,9 @@
+{% javascripts output='assets/*.js' combine=true
+    '@ElHornairDocumentoratorBundle/Resources/public/js/utils.js'
+    '@ElHornairDocumentoratorBundle/Resources/public/js/chapter.js'
+    '@ElHornairDocumentoratorBundle/Resources/public/js/catalog.js'
+    '@ElHornairDocumentoratorBundle/Resources/public/js/toc.js'
+    '@ElHornairDocumentoratorBundle/Resources/public/js/main.js'
+%}
+<script src="{{ asset_url }}" type="text/javascript"></script>
+{% endjavascripts %}

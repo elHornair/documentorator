@@ -1,0 +1,30 @@
+{% extends 'ElHornairDocumentoratorBundle:Story:story.html.twig' %}
+
+{% set id = 'UC-000' %}
+{% set title = 'Documentorator story' %}
+
+{% set description = 'As a user I want a documentation tool' %}
+{% set priority = 'must' %}
+{% set business_value = 'high' %}
+{% set tech_complexity = 'medium' %}
+{% set roles = 'Student, professor, certified documentation engineer' %}
+{% set condition = 'I have prince installed' %}
+
+{% set scenario_main %}
+    <ol>
+        <li><p>I check out the repository on Github</p></li>
+        <li><p>I add my own content</p></li>
+        <li><p>I compile it</p></li>
+        <li><p>I'm happy</p></li>
+    </ol>
+{% endset %}
+
+{% set scenario_alternative %}
+<ol>
+    <li><p>I spend a couple of weeks learning LaTeX</p></li>
+</ol>
+{% endset %}
+
+{% set result %}
+    A nice PDF with infinite possibilities of styling via CSS.
+{% endset %}

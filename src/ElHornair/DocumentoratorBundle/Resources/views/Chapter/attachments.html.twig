@@ -1,0 +1,26 @@
+{% extends 'ElHornairDocumentoratorBundle:Chapter:chapter.html.twig' %}
+
+{% block content %}
+    <h1>Attachments</h1>
+
+    <h2>Code-Listing</h2>
+    {% include "ElHornairDocumentoratorBundle:Attachment:data_example.html.twig" %}
+
+    <h2 class="break-page">CD-ROM</h2>
+    <p>
+        This is a placeholder in case you want to add a data CD to your document:
+    </p>
+
+    <div class="cd">
+        <div class="cd-center">X</div>
+        <div class="cd-top">
+            <div class="cd-edge cd-left"></div>
+            <div class="cd-edge cd-right"></div>
+        </div>
+        <div class="cd-bottom">
+            <div class="cd-edge cd-left"></div>
+            <div class="cd-edge cd-right"></div>
+        </div>
+    </div>
+
+{% endblock %}

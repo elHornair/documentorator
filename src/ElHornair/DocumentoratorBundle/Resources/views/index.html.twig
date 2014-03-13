@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dokumentation Bachelorthesis</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {% include "ElHornairDocumentoratorBundle:Default:less_includes.html.twig" %}
+    </head>
+
+    <body id="main">
+        {% include "ElHornairDocumentoratorBundle:Special:front.html.twig" %}
+
+        <div class="chapter-special">
+            <h1>Abstract</h1>
+            {% include "ElHornairDocumentoratorBundle:Special:abstract_content.html.twig" %}
+        </div>
+
+        {% include "ElHornairDocumentoratorBundle:Special:personal_data.html.twig" %}
+        {% include "ElHornairDocumentoratorBundle:Special:confirmation.html.twig" %}
+        {% include "ElHornairDocumentoratorBundle:Special:toc.html.twig" %}
+
+        <div id="content">
+            {% include "ElHornairDocumentoratorBundle:Chapter:styleguide.html.twig" %}
+            {# TODO: add some explanations and maybe some more chapters for a nice TOC #}
+
+            {% include "ElHornairDocumentoratorBundle:Chapter:catalog.html.twig" %}
+            {% include "ElHornairDocumentoratorBundle:Chapter:attachments.html.twig" %}
+        </div>
+
+        {% include "ElHornairDocumentoratorBundle:Default:scripts.html.twig" %}
+    </body>
+</html>

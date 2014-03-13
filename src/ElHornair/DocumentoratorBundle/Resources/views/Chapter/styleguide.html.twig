@@ -1,0 +1,130 @@
+{% extends 'ElHornairDocumentoratorBundle:Chapter:chapter.html.twig' %}
+
+{% block content %}
+    <h1>Styleguide</h1>
+    <p>
+        Normal paragraph: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+    <p>Ein kurzes Zitat: «<i>Das Zitat</i>»</p>
+    <p class="citation">
+        «Ein langes Zitat. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+        classical Latin literature.»
+    </p>
+    <p>Ein spezielles Wort: <i>Das spezielle Wort</i></p>
+
+    <h2>Subtitle</h2>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+
+    <h3>Subtitle 3rd level</h3>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+    <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+
+    <p>An unordered list:</p>
+
+    <ul>
+        <li>List item level 1</li>
+        <li>
+            List item level 1
+            <ul>
+                <li>List item level 2</li>
+                <li>List item level 2</li>
+                <li>List item level 2</li>
+            </ul>
+        </li>
+        <li>List item level 1</li>
+    </ul>
+
+    <p>An ordered list:</p>
+
+    <ol>
+        <li><p>List item level 1</p></li>
+        <li>
+            <p>List item level 1</p>
+            <ol>
+                <li><p>List item level 1</p></li>
+                <li><p>List item level 1</p></li>
+                <li><p>List item level 1</p></li>
+            </ol>
+        </li>
+        <li><p>List item level 1</p></li>
+    </ol>
+
+    <p>Some code: <span class="code">var test = 3;</span></p>
+
+    <p>An image:</p>
+
+    <figure>
+        <img src="bundles/elhornairbachelordoc/img/testpic.jpg">
+        <figcaption>Ein Testbild</figcaption>
+    </figure>
+
+    <p>A table:</p>
+
+    <table>
+        <caption>Eine Testtabelle</caption>
+        <tr>
+            <th>Begriff</th>
+            <th>Definition</th>
+        </tr>
+        <tr>
+            <td>Begriff</td>
+            <td>Erklärung</td>
+        </tr>
+        <tr>
+            <td>Begriff</td>
+            <td>Erklärung</td>
+        </tr>
+        <tr>
+            <td>Begriff</td>
+            <td>
+                <ul>
+                    <li>one</li>
+                    <li>two</li>
+                    <li>three</li>
+                </ul>
+                <ol>
+                    <li><p>one</p></li>
+                    <li><p>two</p></li>
+                    <li><p>three</p></li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+    <p>Here comes a story:</p>
+    {% include "ElHornairDocumentoratorBundle:Story:story_dummy.html.twig" %}
+
+    <p class="page-external-landscape">
+        This page is rendered in landscape mode (for wide content)
+    </p>
+
+    <p>
+        Verweis auf Glossar<span class="footnote">Siehe Glossar</span>
+
+        Buchverweis allgemein<span class="footnote footnote-source">[KUERZEL]
+        <span class="footnote-source-additional">Autor Name, Autor Vorname:<span class="footnote-source-title">Titel</span>,
+        Verlag, Verlags-Ort, Ausgabe, Erscheinungsjahr, ISBN xxx-x-xxxx-xxx-x, Seiten</span></span>
+
+        Buchverweis konkret<span class="footnote footnote-source">[HA2013]
+        <span class="footnote-source-additional">Horner, Alain: <span class="footnote-source-title">Der Sinn des Lebens</span>,
+        Incredipress, Freiburg, 2013, ISBN 978-3-89864-771-7, Seiten 12 - 18</span></span>
+
+        Webverweis allgemein<span class="footnote footnote-source">[KUERZELb]
+        <span class="footnote-source-additional">Autor Name, Autor Vorname: Titel, Publikationsdatum, abgerufen am
+        Abrufdatum von URL</span></span>
+
+        Webverweis konkret A<span class="footnote footnote-source">[HA2013b]
+        <span class="footnote-source-additional">Horner, Alain: <span class="footnote-source-title">Der Sinn des
+        Internets</span>, 02.04.2013, abgerufen am 13.06.2013 von http://alainhorner.ch/sub</span></span>
+
+        Webverweis konkret B<span class="footnote footnote-source">[YH2006]
+        <span class="footnote-source-additional">Yahoo!: <span class="footnote-source-title">YUI</span>, 2006-2013,
+        abgerufen am 16.08.2013 von http://yuilibrary.com/projects/yui3</span></span>
+    </p>
+{% endblock %}

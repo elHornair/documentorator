@@ -1,0 +1,79 @@
+<div class="story">
+    <table>
+        <tr>
+            <th>{{ id }}</th>
+            <th>{{ title }}</th>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td>{{ description }}</td>
+        </tr>
+        {% if priority is defined %}
+            <tr>
+                <td>Priority:</td>
+                <td>
+                    {{ priority }}
+                </td>
+            </tr>
+        {% endif %}
+        {% if business_value is defined %}
+            <tr>
+                <td>Business value:</td>
+                <td>
+                    {{ business_value }}
+                </td>
+            </tr>
+        {% endif %}
+        {% if tech_complexity is defined %}
+            <tr>
+                <td>Technical complexity:</td>
+                <td>
+                    {{ tech_complexity }}
+                </td>
+            </tr>
+        {% endif %}
+        {% if roles is defined %}
+            <tr>
+                <td>Actors:</td>
+                <td>{{ roles }}</td>
+            </tr>
+        {% endif %}
+        {% if condition is defined %}
+            <tr>
+                <td>Preconditions:</td>
+                <td>{{ condition }}</td>
+            </tr>
+        {% endif %}
+        {% if scenario_main is defined %}
+            <tr>
+                <td>Scenario:</td>
+                <td>
+                    {{ scenario_main }}
+                    {% if scenario_alternative is defined %}
+                        <p>Exceptions:</p>
+                        <p>{{ scenario_alternative }}</p>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endif %}
+        {% if result is defined %}
+            <tr>
+                <td>Result:</td>
+                <td>{{ result }}</td>
+            </tr>
+        {% endif %}
+        {% if no_img is not defined or no_img == false %}
+            <tr class="story-diagram">
+                <td colspan="2">
+                    <p>
+                        Diagram:
+                    </p>
+                    <figure>
+                        <img src="bundles/elhornairdocumentorator/img/UML/stories/{{ id }}.png">
+                        <figcaption>Use case diagram for {{ id }}</figcaption>
+                    </figure>
+                </td>
+            </tr>
+        {% endif %}
+    </table>
+</div>

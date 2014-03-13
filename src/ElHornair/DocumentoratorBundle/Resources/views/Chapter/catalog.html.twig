@@ -1,0 +1,39 @@
+{% extends 'ElHornairDocumentoratorBundle:Chapter:chapter.html.twig' %}
+
+{% block content %}
+    <h1>Catalogs</h1>
+
+    <h2>Glossary</h2>
+    <p>
+        In case you want to define some terms:
+    </p>
+
+    <table class="table-allow-break">
+        <caption>Glossary</caption>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+        </tr>
+        <tr>
+            <td>Documentorator</td>
+            <td>
+                A great way to write documentations based on web-technologies.
+            </td>
+        </tr>
+    </table>
+
+    <h2>Table of figures</h2>
+    <ul id="fig_catalog" class="catalog catalog-caption">
+    </ul>
+
+    <h2>List of tables</h2>
+    <ul id="table_catalog" class="catalog catalog-caption">
+    </ul>
+
+    <h2 class="new-page">Bibliography</h2>
+    <p>
+        The bibliography is ordered alphabetically.
+    </p>
+    <ul id="source_catalog" class="catalog catalog-source">
+    </ul>
+{% endblock %}

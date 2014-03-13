@@ -1,0 +1,11 @@
+el_hornair_documentorator_homepage:
+    pattern:  /
+    defaults: { _controller: ElHornairDocumentoratorBundle:Default:index }
+
+el_hornair_documentorator_abstract:
+    pattern:  /abstract
+    defaults: { _controller: ElHornairDocumentoratorBundle:Default:abstract }
+
+el_hornair_documentorator_curriculum:
+    pattern:  /curriculum
+    defaults: { _controller: ElHornairDocumentoratorBundle:Default:curriculum }
