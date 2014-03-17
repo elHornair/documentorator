@@ -3,14 +3,28 @@
 {% block content %}
     <h1>Styleguide</h1>
     <p>
+        This styleguide provides examples of all sorts of content you might use in normal chapters. If you want to
+        restyle the documentation, this chapter is the perfect testing set.
+    </p>
+    <p>
         Normal paragraph: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
     </p>
-    <p>Ein kurzes Zitat: «<i>Das Zitat</i>»</p>
+    <p>A short citation: «<i>This is a citation.</i>»</p>
     <p class="citation">
-        «Ein langes Zitat. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-        classical Latin literature.»
+        «This is a long citation. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+        piece of classical Latin literature.»
     </p>
-    <p>Ein spezielles Wort: <i>Das spezielle Wort</i></p>
+    <p>This is a special word: <i>special word</i></p>
+    <p>
+        Additional to citations, you can also create text, that references something. For example you might include
+        text mentioning something that is explained in detail in the glossary<span class="footnote">See glossary</span>.
+        This is mentioning a book <span class="footnote footnote-source">[BK2013]<span class="footnote-source-additional">Autor
+                name, autor first name:<span class="footnote-source-title">Title of book</span>, Publisher name,
+                city of publisher, version of book, YYYY (publication date), ISBN number, pages</span></span> while this
+        is mentioning a website<span class="footnote footnote-source">[WS2014]<span class="footnote-source-additional">Autor
+                name, autor first name: title of website, DD.MM.YYYY (publication date), requested at DD.MM.YYYY (request
+                date) from www.someurl.com</span></span>.
+    </p>
 
     <h2>Subtitle</h2>
     <p>
@@ -61,27 +75,27 @@
 
     <figure>
         <img src="bundles/elhornairbachelordoc/img/testpic.jpg">
-        <figcaption>Ein Testbild</figcaption>
+        <figcaption>Caption of test image</figcaption>
     </figure>
 
     <p>A table:</p>
 
     <table>
-        <caption>Eine Testtabelle</caption>
+        <caption>Caption of test table</caption>
         <tr>
-            <th>Begriff</th>
-            <th>Definition</th>
+            <th>Column header 1</th>
+            <th>Column header 2</th>
         </tr>
         <tr>
-            <td>Begriff</td>
-            <td>Erklärung</td>
+            <td>Content 1</td>
+            <td>Content 2</td>
         </tr>
         <tr>
-            <td>Begriff</td>
-            <td>Erklärung</td>
+            <td>Content 3</td>
+            <td>Content 4</td>
         </tr>
         <tr>
-            <td>Begriff</td>
+            <td>Of couse you can also have lists inside tables</td>
             <td>
                 <ul>
                     <li>one</li>
@@ -97,20 +111,10 @@
         </tr>
     </table>
 
-    <p>Here comes a story:</p>
+    <p>In case you have to define requirements, this content might become handy for you:</p>
     {% include "ElHornairDocumentoratorBundle:Story:story_dummy.html.twig" %}
 
     <p class="page-external-landscape">
         This page is rendered in landscape mode (for wide content)
-    </p>
-
-    <p>
-        Text mentioning something that is explained in detail in the glossary<span class="footnote">See glossary</span>.
-        This is mentioning a book <span class="footnote footnote-source">[BK2013]<span class="footnote-source-additional">Autor
-                name, autor first name:<span class="footnote-source-title">Title of book</span>, Publisher name,
-                city of publisher, version of book, YYYY (publication date), ISBN number, pages</span></span> while this
-        is mentioning a website<span class="footnote footnote-source">[WS2014]<span class="footnote-source-additional">Autor
-                name, autor first name: title of website, DD.MM.YYYY (publication date), requested at DD.MM.YYYY (request
-                date) from www.someurl.com</span></span>.
     </p>
 {% endblock %}
