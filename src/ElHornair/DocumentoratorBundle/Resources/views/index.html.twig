@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dokumentation Bachelorthesis</title>
+        <title>Documentorator</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        {# Stylesheets #}
         {% include "ElHornairDocumentoratorBundle:Default:less_includes.html.twig" %}
     </head>
 
     <body id="main">
+        {# Front page #}
         {% include "ElHornairDocumentoratorBundle:Special:front.html.twig" %}
 
         <div class="chapter-special">
+            {# Abstract #}
             <h1>Abstract</h1>
             {% include "ElHornairDocumentoratorBundle:Special:abstract_content.html.twig" %}
         </div>
 
+        {# Special chapters at the beginning of the document #}
         {% include "ElHornairDocumentoratorBundle:Special:personal_data.html.twig" %}
         {% include "ElHornairDocumentoratorBundle:Special:confirmation.html.twig" %}
         {% include "ElHornairDocumentoratorBundle:Special:toc.html.twig" %}
 
         <div id="content">
+            {# Styleguide #}
             {% include "ElHornairDocumentoratorBundle:Chapter:styleguide.html.twig" %}
-            {# TODO: add some explanations and maybe some more chapters for a nice TOC #}
 
+            {# Some dummy content for a nice TOC #}
+            {% include "ElHornairDocumentoratorBundle:Chapter:dummy_content.html.twig" %}
+            {% include "ElHornairDocumentoratorBundle:Chapter:dummy_content.html.twig" %}
+            {% include "ElHornairDocumentoratorBundle:Chapter:dummy_content.html.twig" %}
+
+            {# Catalog#}
             {% include "ElHornairDocumentoratorBundle:Chapter:catalog.html.twig" %}
+
+            {# Attachments#}
             {% include "ElHornairDocumentoratorBundle:Chapter:attachments.html.twig" %}
         </div>
 
+        {# JS for generating catalogs, TOC, ... #}
         {% include "ElHornairDocumentoratorBundle:Default:scripts.html.twig" %}
     </body>
 </html>
