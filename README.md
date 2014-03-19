@@ -20,6 +20,7 @@ You need PHP 5.4 and [PrincePDF](http://www.princexml.com/) installed on your sy
 
         composer install
 
+* Fix the [Symfony2 cache permission problem](http://blog.liip.ch/archive/2011/11/30/how-to-manage-cache-permissions-in-symfony2.html)
 * Setup a virtual host called `documentorator.lo` pointing to your projects web directory
 * Visit [the documentorator page](http://documentorator.lo/app_dev.php) in the browser
 
