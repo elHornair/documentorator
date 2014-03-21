@@ -50,7 +50,7 @@ needs or add new ones.
 If you want to add more standalone documents, add a new route to
 `src/ElHornair/DocumentoratorBundle/Resources/config/routing.yml` and create an according template.
 
-## Can't I just use MS Word [LaTeX](http://www.latex-project.org) for my documentations?
+## Can't I just use MS Word or [LaTeX](http://www.latex-project.org) for my documentations?
 * Short answer: yes
 * Long answer: When I wrote my bachelor thesis, I wanted to have my documentation under version control so that I would
 have a clean protocol of my work (so Word is out). I remembered writing docs in [LaTeX](http://www.latex-project.org/)
